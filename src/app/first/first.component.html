@@ -1,0 +1,16 @@
+<h2>First Component</h2>
+
+<nav>
+  <ul>
+    <li><a routerLink="child-a">Child A</a></li>
+    <li><a routerLink="child-b">Child B</a></li>
+  </ul>
+</nav>
+
+<ul>
+    <li *ngFor="let item of items">{{item}}</li>
+</ul>
+
+<app-other-first [item]="currentItem" (newItemEvent)="addItem($event)"></app-other-first>
+
+<router-outlet></router-outlet>
